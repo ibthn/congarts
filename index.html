@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>congarts</title>
+    <title>Congrats</title>
 
+    <!-- Cairo Font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
@@ -15,42 +16,71 @@
             height: 100vh;
             background-color: #f0f0f0;
             margin: 0;
+            padding: 20px;
         }
 
         #congratulations {
+            text-align: center;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        #congratulations h2 {
             font-size: 3em;
             color: #003B77;
-            font-family: 'Cairo', sans-serif; 
+            margin: 0;
+        }
+
+        #congratulations p {
+            font-size: 1.5em;
+            color: #003B77;
+            margin-top: 10px;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            #congratulations h2 {
+                font-size: 2em;
+            }
+            #congratulations p {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #congratulations h2 {
+                font-size: 1.5em;
+            }
+            #congratulations p {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 <body>
-    <div id="congratulations">
-        <h2>
-            #WorldManagerDay 🎊 🎉
-        </h2>
-        <p>
-            Bandar - Digital Transformation Manager !
-        </p>
-        </div>
 
+    <div id="congratulations">
+        <h2>#WorldManagerDay 🎊 🎉</h2>
+        <p>Bandar - Digital Transformation Manager !</p>
+    </div>
+
+    <!-- Confetti script -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
     <script>
         function launchConfetti() {
-            var duration = 10 * 1000;  
+            var duration = 10 * 1000;  // Confetti duration 10 seconds
             var end = Date.now() + duration;
 
             (function frame() {
                 confetti({
-                    particleCount: 3,
+                    particleCount: 5,
                     angle: 60,
                     spread: 55,
                     origin: { x: 0 },
-                    colors: ['#f39c12', '#e74c3c', '#3498db', '#9b59b6', '#2ecc71'] 
+                    colors: ['#f39c12', '#e74c3c', '#3498db', '#9b59b6', '#2ecc71']
                 });
                 confetti({
-                    particleCount: 3,
+                    particleCount: 5,
                     angle: 120,
                     spread: 55,
                     origin: { x: 1 },
@@ -65,5 +95,6 @@
 
         launchConfetti();
     </script>
+
 </body>
 </html>
